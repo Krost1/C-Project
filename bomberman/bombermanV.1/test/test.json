@@ -1,0 +1,5 @@
+{
+    "request": "POST game/create",
+    "name": "game1",
+    "mapId": 1
+}
