@@ -1,0 +1,5 @@
+{
+    "action": "game/create",
+    "statut": "501",
+    "message": "cannot create game"
+}

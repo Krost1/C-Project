@@ -2,22 +2,24 @@
 #define SERVER_LIB_H
 
 /**
- * @brief Initialise un socket (UDP ou TCP).
+ * @brief Initializes a socket (UDP or TCP).
  *
- * @param port  le port utilisé.
- * @param type  le type de la socket (UDP ou TCP) utilisé.
- * @param addr  un pointeur vers la structure struct sockaddr_in
- * @return le file descriptor.
+ * This function initializes and returns a socket with the specified port and type (UDP or TCP).
+ *
+ * @param port  The port to be used.
+ * @param type  The type of the socket to be initialized (UDP or TCP).
+ * @param addr  A pointer to the structure struct sockaddr_in.
+ * @return The file descriptor of the initialized socket.
  */
 int initSocket(int port, enum __socket_type type);
 
 /**
- * @brief Initialise un serveur UDP, si
- *  le client envoie la bonne réponse, alors
- *  ce dernier afficher les informations du client
- *  avant de lui envoyé un texte qui confir ca connexion.
+ * @brief Initializes a UDP server, verifies client response, and sends confirmation on successful connection.
  *
- * @param NULL Ne prend rien en paramètre.
+ * This function initializes a UDP server. If the client sends the correct response, it displays client information
+ * before sending a confirming text message to acknowledge the connection.
+ *
+ * @param NULL Takes no parameters.
  */
 void *handle_UDPserver();
 

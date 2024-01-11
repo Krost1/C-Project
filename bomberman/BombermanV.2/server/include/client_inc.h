@@ -2,38 +2,48 @@
 #define CLIENT_INC_H
 
 /**
- * @brief Initialise les données d'un joueur.
+ * @brief Initializes the data structure for a player.
  *
- * @param player  la structure.
- * @return NUL.
+ * This function takes a player structure as input and initializes its data.
+ *
+ * @param player  The structure representing the player.
+ * @return NULL.
  */
 void initialize_player(struct _player *player);
 
 /**
- * @brief Initialise les données d'un joueur.
+ * @brief Creates and initializes the data structure for a client.
  *
- * @param client  la structure.
- * @param name  le pseudo du client.
- * @param socket_client la socket du client
- * @param nbr_client l'id dans lequel il se trouve dans le tableau
- * @return NUL.
+ * This function creates a client with the specified name, socket, and position
+ * in the array of clients.
+ *
+ * @param client  The structure representing the client.
+ * @param name  The nickname of the client.
+ * @param socket_client The socket associated with the client.
+ * @param nbr_client The ID indicating the client's position in the client array.
+ * @return NULL.
  */
 void create_client(Client client, char name[BUFF_SIZE], int socket_client, int nbr_client);
 
 /**
- * @brief affiche les joueur connecté au serveur TCP.
+ * @brief Displays the list of players connected to the TCP server.
  *
- * @param nbr_client  l'indice du client.
- * @return NUL.
+ * This function prints information about the connected players using their index.
+ *
+ * @param nbr_client  The index of the client.
+ * @return NULL.
  */
 void print_all_clients(int nbr_client);
 
 /**
- * @brief Envoie un message au client.
+ * @brief Sends a message to a specific client.
  *
- * @param client  client.
- * @param buff le message
- * @return NUL.
+ * This function sends a message to the specified client using its data structure.
+ *
+ * @param client  The structure representing the client.
+ * @param buff The message to be sent.
+ * @return NULL.
  */
 void write_to_client(Client client, char buff[BUFF_SIZE]);
+
 #endif // CLIENT_INC_H
